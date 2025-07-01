@@ -43,7 +43,8 @@ A comprehensive AI-powered soil quality analysis application that provides real-
 ### **Backend**
 - **Python 3.10+**: Core programming language
 - **XGBoost**: Machine learning model for soil classification
-- **LangChain**: AI framework for natural language processing
+- **LangChain**: AI framework
+- **LLM**: llama-3.1
 - **Groq API**: High-performance LLM inference
 
 ### **Frontend**
