@@ -157,10 +157,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - LangChain community for AI integration tools
 - Groq for high-performance LLM inference
 
-## 📞 Support
-
-For support, email your-email@example.com or create an issue in this repository.
-
----
-
 **Made with ❤️ for sustainable agriculture**
