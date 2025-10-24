@@ -8,7 +8,7 @@ imblearn
 joblib
 ipykernel 
 langchain-core
-langchain>=0.1.0 
+langchain 
 langchain_community
 langchain-groq
 groq
