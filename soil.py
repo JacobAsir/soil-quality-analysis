@@ -8,8 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load the model
-loaded_model = XGBClassifier()
-loaded_model.load_model("xgb_soil_analysis.bin")
+import joblib
+loaded_model = joblib.load("xgb_soil_analysis.bin")
+
 
 def get_data_JSON(relevant_data, model):
     """Convert sensor data to JSON format with prediction"""
