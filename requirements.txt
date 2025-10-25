@@ -7,9 +7,9 @@ xgboost
 imblearn
 joblib
 ipykernel 
-langchain-core
-langchain 
-langchain_community
-langchain-groq
+langchain==0.1.14
+langchain-core==0.1.23
+langchain-community==0.0.21
+langchain-groq==0.0.2
 groq
 python-dotenv
