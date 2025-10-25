@@ -1,7 +1,7 @@
 from xgboost import XGBClassifier
 from langchain_groq import ChatGroq
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 import numpy as np
 import os
 from dotenv import load_dotenv
@@ -133,16 +133,17 @@ def create_prompt2(language="English"):
         partial_variables={'language_instruction': lang_instruction}
     )
 
-# Modified chains to accept language parameter
+# Modified chains to use LCEL pipe syntax
 class LanguageAwareLLMChain:
     def __init__(self, llm, prompt_creator):
         self.llm = llm
         self.prompt_creator = prompt_creator
-    
+        self.output_parser = StrOutputParser()
+
     def predict(self, language="English", **kwargs):
         prompt = self.prompt_creator(language)
-        chain = LLMChain(llm=self.llm, prompt=prompt)
-        return chain.predict(**kwargs)
+        chain = prompt | self.llm | self.output_parser
+        return chain.invoke(kwargs)
 
 chain1 = LanguageAwareLLMChain(llm, create_prompt1)
 chain2 = LanguageAwareLLMChain(llm, create_prompt2)
