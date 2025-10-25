@@ -6,8 +6,8 @@ scikit-learn
 xgboost
 imbalanced-learn
 joblib
-langchain==0.1.14
-langchain-community==0.0.21
-langchain-groq==0.3.8
+langchain
+langchain-community
+langchain-groq
 groq
 python-dotenv
