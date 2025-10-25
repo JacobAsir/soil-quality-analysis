@@ -1,6 +1,6 @@
 from xgboost import XGBClassifier
 from langchain_groq import ChatGroq
-from langchain_core.chains import LLMChain
+from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 import numpy as np
 import os
